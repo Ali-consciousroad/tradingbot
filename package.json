@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ali-consciousroad/tradingbot/issues"
   },
-  "homepage": "https://github.com/Ali-consciousroad/tradingbot#readme"
+  "homepage": "https://github.com/Ali-consciousroad/tradingbot#readme",
+  "dependencies": {
+    "gemini-api": "^2.0.4"
+  }
 }
