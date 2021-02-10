@@ -16,7 +16,7 @@ const websocketClient =
 
 // Create a new order with the appropriate parameters
 
-// This doesn't work right now
+/*
 restClient.newOrder({
   //amount:10,price:100,side:"buy",symbol:"btcusd"
   "symbol":"btcusd",
@@ -24,10 +24,28 @@ restClient.newOrder({
   "price":"3633.00",
   "side":"buy",
 })
+// .then(response => console.log(response))
+// Return only the order_id
+.then(response => console.log(response.order_id))
+// Return the error message into the console if any error
+.catch(error => console.log(error));
+*/
+
+// Test cancelOrder
+// Create an order and cancel it immediately 
+restClient.newOrder({
+  //amount:10,price:100,side:"buy",symbol:"btcusd"
+  "symbol":"ethusd",
+  "amount":"10",
+  "price":"500.00",
+  "side":"buy",
+})
+.then(response => restClient.cancelOrder({order_id:response.order_id}))
+// Print the response to the console
 .then(response => console.log(response))
-// Return the error into the console if any
 .catch(error => console.log(error));
 
+// Test other functions
 //restClient.getAllSymbols().then(response => console.log(response));
 /*
 restClient.getTicker("btcusd")
