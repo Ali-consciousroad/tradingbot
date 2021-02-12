@@ -11,6 +11,7 @@ const GeminiAPI = require("gemini-api").default;
 // Initialize the secret and key constants
 const key = "account-qn7buR8IC9jIjzDXE4ZP";
 const secret = "3mL5ouNzJ3qPr7b42x8epj82GJX6";
+const cryptocompareAPIkey = "d87cc241b53fd77464bc8ead23c1554b0c872bc2262712bb87b7366d60ec29d5";
 
 // Create the request for us by calling automatically the appropriate functions
 const restClient = new GeminiAPI({key, secret, sandbox:true});
