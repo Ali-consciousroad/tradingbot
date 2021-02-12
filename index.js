@@ -68,13 +68,52 @@ restClient.getOrderBook("btcusd")
 
 
 /*
-// TEST 
+// TEST
 restClient.getTicker("btcusd")
 .then(response => console.log(response))
 .catch(error => console.log(error));
 */
 
 // 1. Show my available balance
+/*
 restClient.getMyAvailableBalances()
+.then(response => console.log(response))
+.catch(error => console.log(error));
+*/
+
+// 2. Create a few buy limit order (3). Make sure the price is too low for Gemini to fullfil the buy order
+
+restClient.newOrder({
+  "symbol":"ltcusd",
+  "amount":"10",
+  "price":"50.00",
+  "side":"buy",
+})
+// Print the response to the console
+.then(response => console.log(response))
+.catch(error => console.log(error));
+
+restClient.newOrder({
+  "symbol":"btcusd",
+  "amount":"1",
+  "price":"2000.00",
+  "side":"buy",
+})
+// Print the response to the console
+.then(response => console.log(response))
+.catch(error => console.log(error));
+
+restClient.newOrder({
+  "symbol":"ethusd",
+  "amount":"10",
+  "price":"500.00",
+  "side":"buy",
+})
+// Print the response to the console
+.then(response => console.log(response))
+.catch(error => console.log(error));
+
+restClient.getTicker()
+// Print the response to the console
 .then(response => console.log(response))
 .catch(error => console.log(error));
