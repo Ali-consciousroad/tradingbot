@@ -82,7 +82,7 @@ restClient.getMyAvailableBalances()
 */
 
 // 2. Create a few buy limit order (3). Make sure the price is too low for Gemini to fullfil the buy order
-
+/*
 restClient.newOrder({
   "symbol":"ltcusd",
   "amount":"10",
@@ -115,5 +115,11 @@ restClient.newOrder({
 
 restClient.getTicker()
 // Print the response to the console
+.then(response => console.log(response))
+.catch(error => console.log(error));
+*/
+
+// 3. Get a list of all active orders
+restClient.getMyActiveOrders()
 .then(response => console.log(response))
 .catch(error => console.log(error));
