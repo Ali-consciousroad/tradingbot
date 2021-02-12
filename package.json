@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Ali-consciousroad/tradingbot#readme",
   "dependencies": {
+    "cryptocompare": "^1.0.0",
     "gemini-api": "^2.0.4"
   }
 }
