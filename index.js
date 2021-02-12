@@ -127,6 +127,13 @@ restClient.getMyActiveOrders()
 */
 
 // 4. Cancel all active orders
+/*
 restClient.cancelAllActiveOrders()
+.then(response => console.log(response))
+.catch(error => console.log(error));
+*/
+
+// 5.
+restClient.getMyActiveOrders()
 .then(response => console.log(response))
 .catch(error => console.log(error));
