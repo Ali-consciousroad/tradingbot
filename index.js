@@ -11,7 +11,11 @@ const GeminiAPI = require("gemini-api").default;
 // Initialize the secret and key constants
 const key = "account-qn7buR8IC9jIjzDXE4ZP";
 const secret = "3mL5ouNzJ3qPr7b42x8epj82GJX6";
-const cryptocompareAPIkey = "d87cc241b53fd77464bc8ead23c1554b0c872bc2262712bb87b7366d60ec29d5";
+const CCAPIKey = "d87cc241b53fd77464bc8ead23c1554b0c872bc2262712bb87b7366d60ec29d5";
+
+// Import cryptocompare
+const CryptoCompareAPI = require("cryptocompare");
+CryptoCompareAPI.setApiKey(CCAPIKey);
 
 // Create the request for us by calling automatically the appropriate functions
 const restClient = new GeminiAPI({key, secret, sandbox:true});
@@ -20,7 +24,7 @@ const websocketClient =
   new GeminiAPI.WebsocketClient({ key, secret, sandbox: true });
 
 // Create a new order with the appropriate parameters
-/*
+
 restClient.newOrder({
   //amount:10,price:100,side:"buy",symbol:"btcusd"
   "symbol":"btcusd",
@@ -33,7 +37,7 @@ restClient.newOrder({
 //.then(response => console.log(response.order_id))
 // Return the error message into the console if any error
 .catch(error => console.log(error));
-*/
+
 
 
 // Test cancelOrder
