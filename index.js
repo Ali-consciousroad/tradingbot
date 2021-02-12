@@ -120,6 +120,13 @@ restClient.getTicker()
 */
 
 // 3. Get a list of all active orders
+/*
 restClient.getMyActiveOrders()
+.then(response => console.log(response))
+.catch(error => console.log(error));
+*/
+
+// 4. Cancel all active orders
+restClient.cancelAllActiveOrders()
 .then(response => console.log(response))
 .catch(error => console.log(error));
